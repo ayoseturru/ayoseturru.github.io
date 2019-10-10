@@ -12,6 +12,14 @@
     Hello World
 </div>
 <script>
+    let editorExtensionId = "mecokbmnofclapimmlnfegiohceoaocc";
+
+    // Make a simple request:
+    chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: "https://ayoseturru.github.io/"},
+        function (response) {
+            console.log(response.success ? "Success" : "Error");
+        });
+
     console.log("Hello world");
 </script>
 </body>
