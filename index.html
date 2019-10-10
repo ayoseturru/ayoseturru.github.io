@@ -14,10 +14,9 @@
 <script>
     let editorExtensionId = "mecokbmnofclapimmlnfegiohceoaocc";
 
-    // Make a simple request:
-    chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: "https://ayoseturru.github.io/"},
+    chrome.runtime.sendMessage(editorExtensionId, {message: "ENGAGEMENT.GET_ON_BOARDING_CONFIG"},
         function (response) {
-            console.log(response.success ? "Success" : "Error");
+            console.log(response.success ? response : "Error");
         });
 
     console.log("Hello world");
