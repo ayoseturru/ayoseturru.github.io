@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="myDiv">
-    Hello World
+    Communicating...
 </div>
 <script>
     let editorExtensionId = "mecokbmnofclapimmlnfegiohceoaocc";
@@ -17,9 +17,8 @@
     chrome.runtime.sendMessage(editorExtensionId, {message: "ENGAGEMENT.GET_ON_BOARDING_CONFIG"},
         function (response) {
             console.log(response ? response : "Error");
+            document.getElementById("myDiv").innerHTML = "Communication Done"
         });
-
-    console.log("Hello world");
 </script>
 </body>
 </html>
